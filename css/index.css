@@ -1,0 +1,632 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+
+*{
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+/*第一屏背景*/
+.intro{
+    background: url(../img/bg.jpg) no-repeat bottom center;
+    background-size: cover;
+}
+
+/*导航*/
+.navbar{
+    width: 100%;
+    height: 90px;
+    padding: 20px 0;
+    position: fixed;
+    transition: height 1s ease,padding 1s ease,background 1s ease;
+    z-index: 99999999999999999;
+}
+.navbarcon{
+    height: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.totop{
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 46px;
+    text-align: left;
+    text-decoration: none;
+    padding: 4px 6px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.totop b:nth-child(1){
+    font-family: iconfont;
+    color: #F4D03F;
+    font-size: 10px;
+    letter-spacing: -7px;
+    font-weight: 400;
+    vertical-align: top;
+}
+.totop b:nth-child(2){
+    font-family: iconfont;
+    color: #F4D03F;
+    font-size: 18px;
+    font-weight: 400;
+    vertical-align: top;
+}
+.nav{
+    text-align: right;
+}
+.nav2{
+    width: 100%;
+    position: absolute;
+    left: 0;top:100%;
+    border-top: 1px solid #191919;
+    padding-bottom:4px ;
+    display: none;
+}
+.nav2 a{
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    padding:15px 0;
+    padding-left: 33px;
+    background: #000;
+}
+.nav2 a:hover{
+    color: #F4D03F;
+}
+
+.nav span{
+    display: none;
+    position: fixed;right: 30px;top:17px;
+    color: #FFF;
+    cursor: pointer;
+    font-family: iconfont;
+    font-size: 20px;
+}
+.nav a{
+    text-decoration: none;
+    display:inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    height: 50px;
+    width:90px;
+}
+.nav a:hover{
+    color: #F4D03F;
+}
+
+/*首页*/
+.swiper-slide{
+    cursor: default;
+}
+.introbody{
+    width: 90%;
+    height: auto;
+    position: absolute;top:30%;left:0;right:0;
+    margin: auto;
+    text-align: center;
+}
+.introbody h1{
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    color: #FFF;
+    text-align: center;
+}
+.introbody h1 span{
+   color: #F4D03F;
+}
+.introbody p{
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+    margin: 0 0 10px;
+    color: #FFF;
+    text-align: center;
+}
+.page-scroll{
+    width: 70px;
+    height: 70px;
+    margin-top: 75px;
+    padding: 7px 16px;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 50%;
+    color: #F4D03F;
+    background: 0 0;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.introbox{
+    overflow: hidden;
+}
+
+.innerbox{
+    width: 200%;
+}
+
+.innerbox h1{
+    width: 50%;
+    float: left;
+}
+
+@keyframes scroll {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+.page-scroll span{
+    color: #F4D03F;
+    font-family: iconfont;
+    position: absolute;left: 0;right:0;top:20px;
+    margin: auto;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*基本资料*/
+.basic{
+   width: 100%;
+    height: auto;
+    background:linear-gradient(to  bottom,#6E7174 0%,#515559 50%,#32363B ) ;
+}
+.basicbody{
+    width:90% ;
+    height: auto;
+    margin: auto;
+    padding:90px 23px;
+}
+.basic-title{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 0 0;
+    color: #aaa;
+    font-size: 14px;
+}
+.basic-title h2{
+    color: #ddd;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 20px;
+    font-size: 30px;
+    font-family: inherit;
+}
+.basic-title hr{
+    background: #C1A533;
+    height: 4px;
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: 0;
+}
+.basicicon{
+    display: block;
+    margin:20px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #474B4F;
+    text-align: center;
+    line-height: 120px;
+}
+.basiccon{
+    transition: transform .5s linear;
+}
+.basiccon p{
+    color: #AAA;
+}
+.basiccon:hover{
+    transform: scale(1.2);
+}
+.row>div>h4{
+    text-align: center;
+    font-weight: bold;
+    color: #F4D03F;
+    font-size: 18px;
+    font-family: inherit;
+}
+.row>div>p{
+    text-align: center;
+    margin: 0 0 10px;
+    color: #aaa;
+    margin-top: 17px;
+}
+.row>div>span>a{
+    font-family: iconfont;
+    font-size: 45px;
+    color: #AAA;
+}
+
+/*项目经验*/
+.project{
+    width: 100%;
+    height: auto;
+    background:linear-gradient(to  bottom,#FFF 0%,#CCC 100% ) ;
+}
+.projectbody{
+    width:90% ;
+    height: auto;
+    margin: auto;
+    padding:90px 23px;
+}
+.cat{
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.cat li{
+    float: left;
+    width: 25%;
+    border-right: 1px solid #999;
+    text-align: center;
+}
+.cat li a{
+    text-decoration: none;
+    color: #444;
+    display: inline-block;
+    padding: 2px 8px;
+}
+.cat li a:hover{
+    background: #F4D03F;border-radius: 4px;
+}
+.projectjpg ul li{
+    padding:18px 7px;
+}
+
+.hover-bg{
+    width: 90%;
+    height: 90%;
+    transition: transform .5s ease;
+    transform-origin: 80px 80px;
+    position: relative;
+}
+.hover-bg:hover{
+    transform: scale(1.2);
+}
+.hover-text:hover{
+    background: rgba(0,0,0,0.66);
+}
+.hover-text{
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    transition: background .5s ease,opacity .5s ease;
+    opacity: 0;
+}
+.hover-text span{
+    font-family: iconfont;
+    color: #F4D03F;
+    display: block;
+    position: absolute;left:0;right:0;top:40%;
+    margin-top: 10px;
+    transition: margin 1s linear;
+    font-size: 19px;
+}
+.hover-text h4 a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    position: absolute;left:0;right:0;top:29%;
+    margin-bottom: 5px;
+    transition: margin 1s linear;
+}
+.hover-text h4 a:hover{
+   color: #E4C23C;
+}
+.hover-text small{
+    font-size: 85%;
+    color: #FFF;
+    position: absolute;left:0;right:0;top:35%;
+}
+
+.hover-bg img{
+    width: 100%;
+    height: 100%;
+}
+
+/*专业技能*/
+.skill{
+    width: 100%;
+    height: auto;
+    background:linear-gradient(to  bottom,#F4D03F 0%,#C4A733 100% ) ;
+}
+.skillbody{
+    width:90% ;
+    height: auto;
+    margin: auto;
+    padding:90px 23px;
+}
+.skillcon>div:nth-child(1)>img{
+width: 100%;
+    height: 100%;
+}
+.about-text{
+    margin-left: 10px;
+}
+.about-text span{
+    font-family: iconfont;
+    font-size: 27px;
+    color: #FFF;
+    display: block;
+    float: left;
+    margin-top: 3px;
+    margin-left: -40px;
+}
+.padding-left {
+    padding-left: 50px;
+    margin-top: 33px;
+    color: #444;
+}
+.padding-left h4{
+    display: inline-block;
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*gy*/
+
+.gy{
+    padding:0;
+}
+.gy h2{
+    display: inline-block;
+    color:#ccc;
+}
+.gy h2 strong{
+    color: #aaa;
+}
+.gy p{
+    color: #FFF;margin: 0 0 10px;
+}
+
+/*工作经历*/
+.work{
+    width: 100%;
+    height: auto;
+    background:linear-gradient(to  bottom,#FFF 0%,#CCC 100%  ) ;
+}
+.workbody{
+    width:90% ;
+    height: auto;
+    margin: auto;
+    padding:90px 23px;
+}
+.work img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.workcon{
+    text-align: center;
+    margin-top: 10px;
+    padding: 4px 15px;
+    margin-bottom: 20px;
+}
+.work img:hover{
+    /*box-shadow: 0 0 25px #F4D03F ;*/
+    border: 4px solid #F4D03F;
+}
+.workcon .caption{
+    padding: 9px;
+    color: #5a5a5a;
+    margin-top: 15px;
+}
+.caption h3{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.caption p{
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+/*自我评价*/
+.self{
+    width: 100%;
+    height: auto;
+    background: url(../img/selfbg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ddd;
+    padding: 80px 0;
+    position: relative;
+}
+.selfbody{
+    width:90% ;
+    height: auto;
+    margin: auto;
+}
+.selfp{
+    margin-bottom: 153px;
+}
+.btnbox{
+    position: absolute;left: 0;right:0;top:150px;height: 25px;width: 100px;margin: auto;text-align: center;letter-spacing: 10px;
+}
+.btnbox div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFF;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.gdbox{
+    position: absolute;left: 0;right: 0;
+    margin: auto;
+    margin-top: 30px;
+    width: 91%;
+    overflow: hidden;
+}
+.bannerbox{
+    width: 300%;
+    transition: margin 1s ease;
+}
+.bannerbox p{
+    width: 33.333333333%;
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    color: #ddd;
+    float: left;
+}
+
+/*联系方式*/
+.contact{
+    width: 100%;
+    height: auto;
+    background:linear-gradient(to  bottom,#FFF 0%,#CCC 100%  ) ;
+}
+.contactbody{
+    width:90%;
+    height: auto;
+    margin: auto;
+    padding:90px 23px;
+}
+.information p{
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+.information>div{
+    text-align: center;
+}
+.information span{
+    font-family: iconfont;
+    color: #F4D03F;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.email h3{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #555;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+
+}
+.form-group{
+    margin-bottom: 15px;
+}
+
+.subbtn{
+    background-color: #aaa;
+    border: 0;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #ffffff;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.subbtn:hover{
+    background-color: #F4D03F;
+}
+#contactForm{
+    text-align: center;
+    padding: 30px 0;
+}
+
+/*发邮件表单验证*/
+label.error{
+    color: red;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+/*footer*/
+.footer{
+    background: #222222;
+    color: #ddd;
+    padding: 30px 0 25px 0;
+}
+.footerbody{
+    width:90%;
+    height: auto;
+    margin: auto;
+}
+.footerbody>p{
+    font-size: 12px;
+    margin-top: 8px;
+    display: inline-block;
+}
+.footerbody>p>a{
+    text-decoration: none;
+    color: #FFF;
+}
+.footerbody>p>a:nth-child(2){
+    color: #D3C52C;
+}
+.hudong{
+    margin-bottom: 10px;
+    display: inline-block;
+    float: right;
+}
+.hudong li{
+    float: left;
+    margin:5px;
+}
+.hudong li a{
+
+  
+    color: #FFF;
+    font-size: 22px;
+    text-decoration: none;
+    letter-spacing: 15px;
+}
+.hudong li:nth-of-type(3){
+    margin-top:-4px;
+}
+.hudong li:nth-of-type(4){
+    margin-top:-1px;
+}
+.hudong li img:hover{
+    color: #F4D03F;
+}
+
+
+
+
+
